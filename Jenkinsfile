@@ -13,12 +13,6 @@ pipeline {
         TF_VAR_dev_vpc_cidr     = "10.0.0.0/16"
         TF_VAR_dev_public_cidr  = "10.0.1.0/24"
         TF_VAR_dev_private_cidr = "10.0.2.0/24"
-    TF_VAR_uat_vpc_cidr     = "10.1.0.0/16"
-    TF_VAR_uat_public_cidr  = "10.1.1.0/24"
-    TF_VAR_uat_private_cidr = "10.1.2.0/24"
-    TF_VAR_ami_id           = "ami-0c7217cdde317cfec"
-    TF_VAR_instance_type    = "t3.micro"
-
 
     }
 
