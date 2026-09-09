@@ -42,7 +42,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 dir("${TF_DIR}") {
-                    sh 'terraform plan -var-file=terraform.tfvars -out=tfplan'
+                    sh 'terraform plan -var-file=dev.tfvars -out=tfplan'
                 }
             }
         }
