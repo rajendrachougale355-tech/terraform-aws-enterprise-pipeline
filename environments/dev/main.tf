@@ -20,13 +20,13 @@ module "dev_security_groups" {
   environment = "development"
 }
 module "dev_ec2" {
-   source = "../../modules/ec2"
+  source = "../../modules/ec2"
 
-  vpc_id     = module.dev_network.vpc_id
-  subnet_id   = module.dev_network.public_subnet_id
+  vpc_id             = module.dev_network.vpc_id
+  subnet_id          = module.dev_network.public_subnet_id
   security_group_ids = [module.dev_security_groups.web_sg_id]
-  environment = "development"
-  ami_id = "ami-01a00762f46d584a1" # Replace with your desired AMI ID
-  instance_type = "t3.micro" # Replace with your desired instance type
+  environment        = "development"
+  ami_id             = "ami-01a00762f46d584a1" # Replace with your desired AMI ID
+  instance_type      = "t3.micro"              # Replace with your desired instance type
 
 }
