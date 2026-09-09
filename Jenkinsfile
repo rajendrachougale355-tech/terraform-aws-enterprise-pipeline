@@ -75,9 +75,10 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            cleanWs() // Prevents plain-text state files or credentials from remaining on Jenkins executor
-        }
+  post {
+    always {
+        cleanWs(deleteDirs: false)
     }
+}
+
 }
