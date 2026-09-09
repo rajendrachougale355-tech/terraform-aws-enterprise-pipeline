@@ -10,6 +10,9 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
         TF_DIR             = "environments/${params.ENVIRONMENT}"
+        TF_VAR_dev_vpc_cidr     = "10.0.0.0/16"
+        TF_VAR_dev_public_cidr  = "10.0.1.0/24"
+        TF_VAR_dev_private_cidr = "10.0.2.0/24"
     }
 
     stages {
